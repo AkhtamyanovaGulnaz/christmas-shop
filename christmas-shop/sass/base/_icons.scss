@@ -1,0 +1,65 @@
+.ico {
+  cursor: pointer;
+  display: inline-block;
+  @extend %transition;
+}
+
+.ico_logo {
+  background-image: url("/christmas-shop/img/icons/snowflake.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.ico_santa-claus {
+  background-image: url("/christmas-shop/img/icons/santa-claus.svg");
+  width: 80px;
+  height: 80px;
+}
+
+.ico_christmas-tree {
+  background-image: url("/christmas-shop/img/icons/christmas-tree.svg");
+  width: 80px;
+  height: 80px;
+}
+
+.ico_snake {
+  background-image: url("/christmas-shop/img/icons/snake.svg");
+  width: 80px;
+  height: 80px;
+}
+
+.socials_ico {
+  @include flex ($justify-content: center, $gap: 12px);
+
+  .ico {
+    margin: 8px;
+    width: 24px;
+    height: 24px;
+    background-color: $color-dark;
+
+    &:hover {
+      background-color: $color-primary;
+    }
+
+    &_telegram {
+      mask: url(../img/icons/telegram.svg) no-repeat center / contain;
+      -webkit-mask: url(../img/icons/telegram.svg) no-repeat center / contain;
+    }
+    
+    &_facebook {
+      mask: url(../img/icons/facebook.svg) no-repeat center / contain;
+      -webkit-mask: url(../img/icons/facebook.svg) no-repeat center / contain;
+    }
+    
+    &_instagram {
+      mask: url(../img/icons/instagram.svg) no-repeat center / contain;
+      -webkit-mask: url(../img/icons/instagram.svg) no-repeat center / contain;
+    }
+    
+    &_X {
+      mask: url(../img/icons/X.svg) no-repeat center / contain;
+      -webkit-mask: url(../img/icons/X.svg) no-repeat center / contain;
+    }
+  }
+}
+

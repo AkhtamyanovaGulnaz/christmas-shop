@@ -1,0 +1,36 @@
+.slider-section {
+  background: 
+    url(../img/backgrounds/bg-snow.png) no-repeat center / cover,
+    $color-primary;
+
+    padding: 60px;
+    color: $color-white;
+
+    overflow: hidden;
+
+    &__container {
+      @include flex ($flex-direction: column, $gap: 20px);
+    
+      .button {
+        align-self: flex-end;
+      }
+    }
+
+    &__text {
+      @include flex ($flex-direction: column, $gap: 12px);
+    }
+}
+
+.slider {
+  @include flex ($gap: 20px);
+
+  position: relative;
+  left: 360px;
+
+  img {
+    width: 200px;
+    height: 200px;
+
+    border-radius: 20px;
+  }
+}

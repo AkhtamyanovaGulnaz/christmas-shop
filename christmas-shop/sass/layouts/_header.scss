@@ -1,0 +1,9 @@
+.header {
+  background-color: $color-white;
+  padding: 12px 0 12px 0;
+  color: $color-dark;
+
+  &__wrapper {
+    @include flex;
+  }
+}

@@ -1,0 +1,22 @@
+.footer__wrapper {
+  @include flex ($flex-direction: column, $gap: 60px);
+
+  padding: 60px;
+  color: $color-dark;
+  background-color: $color-white;
+}
+
+.footer__container {
+  @include flex ($flex-direction: column, $justify-content: none, $gap: 12px);
+  align-self: stretch;
+
+  a {
+    color: $color-dark;
+
+    &:hover {
+      color: $color-primary;
+      @extend %transition;
+    }
+  }
+}
+

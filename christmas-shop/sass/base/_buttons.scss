@@ -1,0 +1,71 @@
+.button-link {
+  font-family: "Montserrat", sans-serif;
+  background: $color-dark;
+  color: $color-white;
+
+  padding: 20px 32px;
+  border-radius: 20px;
+  border: none;
+  
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    background: $color-white;
+    color: $color-dark;
+  }
+}
+
+.button {
+  @include flex ($justify-content: flex-end, $align-items: none, $gap: 20px);
+
+  &-arrow {
+    @include flex ($justify-content: center);
+    width: 56px;
+    height: 56px;
+    border-radius: 20px;
+    border: 1px solid $color-white;
+
+    background: transparent;
+    cursor: pointer;
+    @extend %transition;
+
+    &--left {
+      mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
+      -webkit-mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
+      transform: scaleX(-1);
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    
+      background-color: $color-white;
+    }
+    
+    &--right {
+      mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
+      -webkit-mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    
+      background-color: $color-white;
+    }
+    
+    &:hover {
+      background: $color-white;
+    
+      .button-arrow--left {
+        background-color: $color-primary;
+      }
+    
+      .button-arrow--right {
+        background-color: $color-primary;
+      }
+    }
+    
+    &:disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+}

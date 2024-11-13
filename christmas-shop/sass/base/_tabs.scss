@@ -1,0 +1,18 @@
+.tabs {
+  @include flex ($justify-content: center, $gap: 8px);
+
+  span {
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    @extend %transition;
+
+    &:hover {
+      background: $color-20white;
+    }
+  }
+}
+
+.tabs--active {
+  background: $color-20white;
+}

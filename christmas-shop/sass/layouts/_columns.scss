@@ -1,0 +1,15 @@
+.layout-4-column {
+  @include flex ($gap: 12px);
+}
+
+.layout-3-column {
+  @include flex ($justify-content: center, $gap: 12px);
+  align-self: stretch;
+
+  border-radius: 60px;
+}
+
+.layout-12-column {
+  @include flex ($gap: 12px);
+  flex-wrap: wrap;
+}
