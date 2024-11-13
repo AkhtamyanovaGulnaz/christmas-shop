@@ -5,61 +5,49 @@
 }
 
 .ico_logo {
-  background-image: url("/christmas-shop/img/icons/snowflake.svg");
+  background-image: url("../img/icons/snowflake.svg");
   width: 24px;
   height: 24px;
 }
 
 .ico_santa-claus {
-  background-image: url("/christmas-shop/img/icons/santa-claus.svg");
+  background-image: url("../img/icons/santa-claus.svg");
   width: 80px;
   height: 80px;
 }
 
 .ico_christmas-tree {
-  background-image: url("/christmas-shop/img/icons/christmas-tree.svg");
+  background-image: url("../img/icons/christmas-tree.svg");
   width: 80px;
   height: 80px;
 }
 
 .ico_snake {
-  background-image: url("/christmas-shop/img/icons/snake.svg");
+  background-image: url("../img/icons/snake.svg");
   width: 80px;
   height: 80px;
 }
 
-.socials_ico {
+.socials {
   @include flex ($justify-content: center, $gap: 12px);
 
-  .ico {
-    margin: 8px;
-    width: 24px;
-    height: 24px;
-    background-color: $color-dark;
+  &_ico {
+    display: flex;
+    cursor: pointer;
 
-    &:hover {
-      background-color: $color-primary;
+    .ico {
+      margin: 8px 8px;
+      width: 24px;
+      height: 24px;
     }
 
-    &_telegram {
-      mask: url(../img/icons/telegram.svg) no-repeat center / contain;
-      -webkit-mask: url(../img/icons/telegram.svg) no-repeat center / contain;
+    &svg path {
+      stroke: $color-dark;
     }
-    
-    &_facebook {
-      mask: url(../img/icons/facebook.svg) no-repeat center / contain;
-      -webkit-mask: url(../img/icons/facebook.svg) no-repeat center / contain;
-    }
-    
-    &_instagram {
-      mask: url(../img/icons/instagram.svg) no-repeat center / contain;
-      -webkit-mask: url(../img/icons/instagram.svg) no-repeat center / contain;
-    }
-    
-    &_X {
-      mask: url(../img/icons/X.svg) no-repeat center / contain;
-      -webkit-mask: url(../img/icons/X.svg) no-repeat center / contain;
+
+    &:hover svg path {
+      stroke: $color-primary;
+      @extend %transition;
     }
   }
 }
-

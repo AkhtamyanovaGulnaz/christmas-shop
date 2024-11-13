@@ -1,4 +1,4 @@
-.card-contact, .card__container, .navigation__link, .footer__container a:hover, .tabs span, .ico, .button-arrow, .button-link {
+.card-contact, .card__container, .navigation__link, .footer__container a:hover, .tabs span, .socials_ico:hover svg path, .ico, .button-arrow, .button-link {
   transition: all 0.3s ease-out;
 }
 
@@ -136,30 +136,16 @@ h4 {
   cursor: pointer;
 }
 .button-arrow--left {
-  mask: url(../img/icons/arrow-right.svg) no-repeat center/contain;
-  -webkit-mask: url(../img/icons/arrow-right.svg) no-repeat center/contain;
   transform: scaleX(-1);
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background-color: #FFFFFF;
-}
-.button-arrow--right {
-  mask: url(../img/icons/arrow-right.svg) no-repeat center/contain;
-  -webkit-mask: url(../img/icons/arrow-right.svg) no-repeat center/contain;
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background-color: #FFFFFF;
 }
 .button-arrow:hover {
   background: #FFFFFF;
 }
-.button-arrow:hover .button-arrow--left {
-  background-color: #FF4646;
+.button-arrow svg path {
+  stroke: #FFFFFF;
 }
-.button-arrow:hover .button-arrow--right {
-  background-color: #FF4646;
+.button-arrow:hover svg path {
+  stroke: #FF4646;
 }
 .button-arrow:disabled {
   opacity: 0.4;
@@ -184,60 +170,50 @@ h4 {
 }
 
 .ico_logo {
-  background-image: url("/christmas-shop/img/icons/snowflake.svg");
+  background-image: url("../img/icons/snowflake.svg");
   width: 24px;
   height: 24px;
 }
 
 .ico_santa-claus {
-  background-image: url("/christmas-shop/img/icons/santa-claus.svg");
+  background-image: url("../img/icons/santa-claus.svg");
   width: 80px;
   height: 80px;
 }
 
 .ico_christmas-tree {
-  background-image: url("/christmas-shop/img/icons/christmas-tree.svg");
+  background-image: url("../img/icons/christmas-tree.svg");
   width: 80px;
   height: 80px;
 }
 
 .ico_snake {
-  background-image: url("/christmas-shop/img/icons/snake.svg");
+  background-image: url("../img/icons/snake.svg");
   width: 80px;
   height: 80px;
 }
 
-.socials_ico {
+.socials {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 12px;
 }
+.socials_ico {
+  display: flex;
+  cursor: pointer;
+}
 .socials_ico .ico {
-  margin: 8px;
+  margin: 8px 8px;
   width: 24px;
   height: 24px;
-  background-color: #181C29;
 }
-.socials_ico .ico:hover {
-  background-color: #FF4646;
+.socials_icosvg path {
+  stroke: #181C29;
 }
-.socials_ico .ico_telegram {
-  mask: url(../img/icons/telegram.svg) no-repeat center/contain;
-  -webkit-mask: url(../img/icons/telegram.svg) no-repeat center/contain;
-}
-.socials_ico .ico_facebook {
-  mask: url(../img/icons/facebook.svg) no-repeat center/contain;
-  -webkit-mask: url(../img/icons/facebook.svg) no-repeat center/contain;
-}
-.socials_ico .ico_instagram {
-  mask: url(../img/icons/instagram.svg) no-repeat center/contain;
-  -webkit-mask: url(../img/icons/instagram.svg) no-repeat center/contain;
-}
-.socials_ico .ico_X {
-  mask: url(../img/icons/X.svg) no-repeat center/contain;
-  -webkit-mask: url(../img/icons/X.svg) no-repeat center/contain;
+.socials_ico:hover svg path {
+  stroke: #FF4646;
 }
 
 .for-work {
