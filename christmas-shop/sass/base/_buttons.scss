@@ -31,36 +31,19 @@
     @extend %transition;
 
     &--left {
-      mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
-      -webkit-mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
       transform: scaleX(-1);
-      width: 24px;
-      height: 24px;
-      display: inline-block;
-    
-      background-color: $color-white;
-    }
-    
-    &--right {
-      mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
-      -webkit-mask: url(../img/icons/arrow-right.svg) no-repeat center / contain;
-      width: 24px;
-      height: 24px;
-      display: inline-block;
-    
-      background-color: $color-white;
     }
     
     &:hover {
       background: $color-white;
-    
-      .button-arrow--left {
-        background-color: $color-primary;
-      }
-    
-      .button-arrow--right {
-        background-color: $color-primary;
-      }
+    }
+
+    & svg path {
+      stroke: $color-white; 
+    }
+
+    &:hover svg path {
+      stroke: $color-primary; 
     }
     
     &:disabled {
