@@ -1,0 +1,18 @@
+.gifts {
+  background: 
+    url(../img/backgrounds/bg-garland.png) no-repeat top / contain,
+    $color-primary;
+
+  padding: 60px;
+  border-radius: 20px 20px 20px 20px;
+  color: $color-white;
+
+  &__wrapper {
+    @include flex ($flex-direction: column, $gap: 20px);
+  }
+
+  h1 {
+    max-width: 426px;
+    text-align: center;
+  }
+}

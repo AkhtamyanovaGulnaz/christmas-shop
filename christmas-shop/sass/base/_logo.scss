@@ -1,0 +1,8 @@
+.logo {
+  @include flex ($gap: 8px);
+  padding: 8px 20px;
+
+  &__text {
+    color: $color-dark;
+  }
+}

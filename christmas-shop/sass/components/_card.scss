@@ -1,0 +1,47 @@
+.card {
+  @include flex ($flex-direction: column);
+
+  width: 310px;
+  height: 342px;
+  padding: 0;
+  border-radius: 20px;
+  background: $color-background;
+  cursor: pointer;
+
+  img {
+    width: 310px;
+    height: 230px;
+  }
+}
+
+.card:hover .card__container {
+  color: $color-primary;
+}
+
+.card__container {
+  @include flex ($flex-direction: column, $justify-content: none, $align-items: flex-start, $gap: 8px);
+  align-self: stretch;
+
+  padding: 20px;
+  height: 72px;
+  border-radius: 20px;
+  background: $color-white;
+  color: $color-dark;
+  @extend %transition;
+}
+
+.card-contact {
+  @include flex ($flex-direction: column, $justify-content: center, $gap: 12px);
+  flex: 1 0 0;
+
+  padding: 20px 20px;
+  border-radius: 20px;
+  background: $color-background;
+  color: $color-dark;
+  cursor: pointer;
+  @extend %transition;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
