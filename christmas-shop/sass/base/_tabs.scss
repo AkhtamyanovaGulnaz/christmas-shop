@@ -11,8 +11,9 @@
       background: $color-20white;
     }
   }
-}
 
-.tabs--active {
-  background: $color-20white;
+  .tabs--active {
+    background: $color-20white;
+    cursor: default;
+  }
 }
