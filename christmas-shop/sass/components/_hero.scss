@@ -8,6 +8,10 @@
   padding: 60px;
   border-radius: 20px 20px 0px 0px;
 
+  @include media-tablet {
+    padding: 60px 0;
+  }
+
 }
 
 .hero__wrapper {
@@ -17,6 +21,10 @@
 .hero__container {
   @include flex ($flex-direction: column, $justify-content: center, $gap: 12px);
   text-align: center;
-  padding: 60px;
+  padding: 60px 0;
   max-width: 430px;
+
+  @include media-mobile {
+    // min-width: 364psx;
+  }
 }
