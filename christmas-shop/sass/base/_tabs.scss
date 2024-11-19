@@ -1,11 +1,19 @@
 .tabs {
   @include flex ($justify-content: center, $gap: 8px);
 
+  @media (max-width: 490px) {
+    gap: 0;
+  }
+
   span {
     border-radius: 12px;
     padding: 12px 20px;
     cursor: pointer;
     @extend %transition;
+
+    @media (max-width: 490px) {
+      padding: 12px 8px;
+    }
 
     &:hover {
       background: $color-20white;

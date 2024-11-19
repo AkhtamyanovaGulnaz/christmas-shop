@@ -1,22 +1,24 @@
-.footer__wrapper {
-  @include flex ($flex-direction: column, $gap: 60px);
+.footer {
+  padding: 60px 0;
 
-  padding: 60px;
-  color: $color-dark;
-  background-color: $color-white;
-}
-
-.footer__container {
-  @include flex ($flex-direction: column, $justify-content: none, $gap: 12px);
-  align-self: stretch;
-
-  a {
+  &__wrapper {
+    @include flex ($flex-direction: column, $gap: 60px);
+  
     color: $color-dark;
+    background-color: $color-white;
+  }
 
-    &:hover {
-      color: $color-primary;
-      @extend %transition;
+  &__container {
+    @include flex ($flex-direction: column, $justify-content: none, $gap: 12px);
+    align-self: stretch;
+  
+    a {
+      color: $color-dark;
+  
+      &:hover {
+        color: $color-primary;
+        @extend %transition;
+      }
     }
   }
 }
-
