@@ -33,7 +33,9 @@
 .card-contact {
   @include flex ($flex-direction: column, $justify-content: center, $gap: 12px);
   flex: 1 0 0;
+  align-self: stretch;
 
+  min-width: 324px;
   padding: 20px 20px;
   border-radius: 20px;
   background: $color-background;
