@@ -1,4 +1,4 @@
-.card-contact, .card__container, .navigation__link, .footer__container a:hover, .tabs span, .socials_ico:hover svg path, .ico, .button-arrow, .button-link {
+.card-contact, .card__container, .navigation__link, .tabs span, .ico, .button-arrow, .button-link {
   transition: all 0.3s ease-out;
 }
 
@@ -110,9 +110,11 @@ h4 {
   border: none;
   cursor: pointer;
 }
-.button-link:hover {
-  background: #FFFFFF;
-  color: #181C29;
+@media (hover: hover) {
+  .button-link:hover {
+    background: #FFFFFF;
+    color: #181C29;
+  }
 }
 
 .button {
@@ -138,14 +140,18 @@ h4 {
 .button-arrow--left {
   transform: scaleX(-1);
 }
-.button-arrow:hover {
-  background: #FFFFFF;
+@media (hover: hover) {
+  .button-arrow:hover {
+    background: #FFFFFF;
+  }
 }
 .button-arrow svg path {
   stroke: #FFFFFF;
 }
-.button-arrow:hover svg path {
-  stroke: #FF4646;
+@media (hover: hover) {
+  .button-arrow:hover svg path {
+    stroke: #FF4646;
+  }
 }
 .button-arrow:disabled {
   opacity: 0.4;
@@ -212,8 +218,11 @@ h4 {
 .socials_icosvg path {
   stroke: #181C29;
 }
-.socials_ico:hover svg path {
-  stroke: #FF4646;
+@media (hover: hover) {
+  .socials_ico:hover svg path {
+    stroke: #FF4646;
+    transition: all 0.3s ease-out;
+  }
 }
 
 .for-work {
@@ -250,8 +259,10 @@ h4 {
     padding: 12px 8px;
   }
 }
-.tabs span:hover {
-  background: rgba(255, 255, 255, 0.2);
+@media (hover: hover) {
+  .tabs span:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 .tabs .tabs--active {
   background: rgba(255, 255, 255, 0.2);
@@ -372,8 +383,11 @@ h4 {
 .footer__container a {
   color: #181C29;
 }
-.footer__container a:hover {
-  color: #FF4646;
+@media (hover: hover) {
+  .footer__container a:hover {
+    color: #FF4646;
+    transition: all 0.3s ease-out;
+  }
 }
 
 .navigation {
@@ -392,9 +406,11 @@ h4 {
   border-radius: 12px;
   color: #181C29;
 }
-.navigation__link:hover {
-  background: rgba(255, 70, 70, 0.1);
-  color: #FF4646;
+@media (hover: hover) {
+  .navigation__link:hover {
+    background: rgba(255, 70, 70, 0.1);
+    color: #FF4646;
+  }
 }
 
 .navigation--active-link {
@@ -570,10 +586,11 @@ h4 {
   height: 230px;
 }
 
-.card:hover .card__container {
-  color: #FF4646;
+@media (hover: hover) {
+  .card:hover .card__container {
+    color: #FF4646;
+  }
 }
-
 .card__container {
   display: flex;
   flex-direction: column;
@@ -603,8 +620,10 @@ h4 {
   color: #181C29;
   cursor: pointer;
 }
-.card-contact:hover {
-  color: #FF4646;
+@media (hover: hover) {
+  .card-contact:hover {
+    color: #FF4646;
+  }
 }
 
 .cta {
