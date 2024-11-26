@@ -12,9 +12,12 @@
   border-radius: 12px;
   color: $color-dark;
   @extend %transition;
-  &:hover {
-    background: $color-10primary;
-    color: $color-primary;
+  
+  @media (hover: hover) {
+    &:hover {
+      background: $color-10primary;
+      color: $color-primary;
+    }
   }
 }
 
