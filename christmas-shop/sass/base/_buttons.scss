@@ -10,9 +10,11 @@
   cursor: pointer;
   @extend %transition;
 
-  &:hover {
-    background: $color-white;
-    color: $color-dark;
+  @media (hover: hover) {
+    &:hover {
+      background: $color-white;
+      color: $color-dark;
+    }
   }
 }
 
@@ -34,16 +36,20 @@
       transform: scaleX(-1);
     }
     
-    &:hover {
-      background: $color-white;
+    @media (hover: hover) {
+      &:hover {
+        background: $color-white;
+      }
     }
-
+    
     & svg path {
       stroke: $color-white; 
     }
 
-    &:hover svg path {
-      stroke: $color-primary; 
+    @media (hover: hover) {
+      &:hover svg path {
+        stroke: $color-primary; 
+      }
     }
     
     &:disabled {
