@@ -15,9 +15,11 @@
     a {
       color: $color-dark;
   
-      &:hover {
-        color: $color-primary;
-        @extend %transition;
+      @media (hover: hover) {
+        &:hover {
+          color: $color-primary;
+          @extend %transition;
+        }
       }
     }
   }

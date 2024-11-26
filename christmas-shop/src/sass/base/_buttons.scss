@@ -52,3 +52,30 @@
     }
   }
 }
+
+.button-up {
+  @include flex ($justify-content: center);
+  width: 56px;
+  height: 56px;
+  padding: 0px;
+
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+
+  border-radius: 100px;
+  border: 1px solid $color-primary;
+  background: $color-white;
+  @extend %transition;
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+.button-up.active {
+  @include media-tablet {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+}

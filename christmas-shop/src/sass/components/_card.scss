@@ -11,6 +11,8 @@
   img {
     width: 310px;
     height: 230px;
+
+    pointer-events: none;
   }
 }
 
@@ -28,6 +30,17 @@
   background: $color-white;
   color: $color-dark;
   @extend %transition;
+
+  .name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+
+  > * {
+    pointer-events: none;
+  }
 }
 
 .card-contact {

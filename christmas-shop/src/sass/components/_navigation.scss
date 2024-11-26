@@ -12,13 +12,39 @@
   border-radius: 12px;
   color: $color-dark;
   @extend %transition;
-  &:hover {
-    background: $color-10primary;
+
+  @media (hover: hover) {
+    &:hover {
+      background: $color-10primary;
     color: $color-primary;
+    }
   }
 }
 
 .navigation--active-link {
   background-color: $color-10primary;
   color: $color-primary;
+}
+
+.mobile-navigation {
+  position: fixed;
+  left: 769px;
+  display: none;
+  
+  background-color: $color-white;
+  transition: all 1s ease;
+
+  @include media-tablet {
+    @include flex ($flex-direction: column, $justify-content: center, $gap: 8px);
+    align-self: stretch;
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 40px);
+  }
+}
+
+.mobile-navigation__link {
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: $color-dark;
 }
