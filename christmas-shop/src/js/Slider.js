@@ -22,7 +22,6 @@ export function Slider() {
   };
 
   updateButtons();
-  console.log(maxShift)
   buttonRight.addEventListener('click', () => {
     if (shift < maxShift - 1) {
 
@@ -34,7 +33,6 @@ export function Slider() {
       }
 
       shift += moveDistance;
-      console.log(shift)
       slider.style.left = -shift + 'px'; 
       updateButtons();
     }
@@ -47,7 +45,6 @@ export function Slider() {
         shift = 0;
       }
       slider.style.left = -shift + 'px';
-      console.log(shift)
       updateButtons();
     }
   });
