@@ -1,4 +1,9 @@
-import { Modal } from './Modal'
+import { Modal } from './Modal';
+
+const imgForWork = require('../img/gifts/gift-for-work.png');
+const imgForHealth = require('../img/gifts/gift-for-health.png');
+const imgForHarmony = require('../img/gifts/gift-for-harmony.png');
+
 
 export class ArticleModal extends Modal {
   constructor(classes, { name, description, category, superpowers }) {
@@ -48,15 +53,15 @@ export class ArticleModal extends Modal {
     let alt = '';
     let tab = '';
     if (this.category === 'For Work') {
-      src = 'src/img/gifts/gift-for-work.png'
+      src = imgForWork
       alt = 'gift-for-work'
       tab = 'for-work'
     } else if (this.category === 'For Health') {
-      src = 'src/img/gifts/gift-for-health.png'
+      src = imgForHealth
       alt = 'gift-for-health'
       tab = 'for-health'
     } else if (this.category === 'For Harmony') {
-      src = 'src/img/gifts/gift-for-harmony.png'
+      src = imgForHarmony
       alt = 'gift-for-harmony'
       tab = 'for-harmony'
     }
