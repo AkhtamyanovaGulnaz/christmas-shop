@@ -19,7 +19,7 @@ window.onload = function() {
   //Tabs
   addTabsClickHandler();
 
-  if (window.location.pathname.includes('index.html')) {
+  if (window.location.pathname.includes('index.html') || !window.location.pathname.includes('gifts.html')) {
     setInterval(Timer, 1000);
     Slider();
   } else {
