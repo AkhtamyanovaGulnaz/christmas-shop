@@ -7,6 +7,7 @@
   background-color: $color-dark;
   border-radius: 5px;
   left: 10px;
+  transition: all 1s ease;
 }
 
 .hamburger {
@@ -17,13 +18,25 @@
   @include media-tablet {
     display: inline-block;
   }
-  &:before {
+  &::before {
     @extend %hamburger-line;
     top: 15.5px;
   }
-}
 
-.hamburger__line {
-  @extend %hamburger-line;
-  bottom: 15.5px;
+  &__line {
+    @extend %hamburger-line;
+    bottom: 15.5px;
+  }
+  
+  &.close {
+    & .hamburger__line {
+      transform: rotate(45deg); 
+      top: 50%; 
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 50%;
+    }
+  }
 }

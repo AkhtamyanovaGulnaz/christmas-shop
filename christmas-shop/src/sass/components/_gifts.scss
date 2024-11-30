@@ -11,6 +11,10 @@
     @include flex ($flex-direction: column, $gap: 20px);
   }
 
+  .card_hidden {
+    display: none;
+  }
+
   h1 {
     max-width: 426px;
     text-align: center;

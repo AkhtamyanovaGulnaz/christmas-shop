@@ -23,6 +23,9 @@
 
 .slider {
   @include flex ($gap: 20px);
+  position: relative;
+  transition: all 1s ease;
+  left: 0;
 
   img {
     width: 200px;

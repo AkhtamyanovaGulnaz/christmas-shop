@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./sass/style.css">
-  <link rel="icon" type="image/png" href="img/icons/snowflake.svg">
+  <link rel="stylesheet" href="./dist/style.css">
+  <link rel="icon" type="image/png" href="src/img/icons/snowflake.svg">
 </head>
 <body>
   <header class="header action-small">
@@ -25,6 +25,14 @@
         <a class="navigation__link" href="#about">about</a>
         <a class="navigation__link" href="#best">best</a>
         <a class="navigation__link" href="#contacts">contacts</a>
+      </nav>
+    </div>
+    <div class="wrapper mobile-header__wrapper">
+      <nav class="mobile-navigation action-large">
+        <a class="mobile-navigation__link" href="gifts.html">gifts</a>
+        <a class="mobile-navigation__link" href="#about">about</a>
+        <a class="mobile-navigation__link" href="#best">best</a>
+        <a class="mobile-navigation__link" href="#contacts">contacts</a>
       </nav>
     </div>
   </header>
@@ -49,7 +57,7 @@
           </div>
         </div>
         <div class="about__img-container">
-          <img class="about__img" src="img/about/santa.svg" alt="santa">
+          <img class="about__img" src="src/img/about/santa.svg" alt="santa">
         </div>
       </div>
     </div>
@@ -61,25 +69,25 @@
           <p class="caption">Become Happier!</p>
           <h2>in the new 2025</h2>
         </div>
-        <div class="slider">
+        <div id="slider" class="slider">
           <p class="slider-text">Live</p>
-          <img src="img/slider/snowman.png" alt="snowman">
+          <img src="src/img/slider/snowman.png" alt="snowman">
           <p class="slider-text">create</p>
-          <img src="img/slider/christmas-trees.png" alt="christmas-trees">
+          <img src="src/img/slider/christmas-trees.png" alt="christmas-trees">
           <p class="slider-text">Love</p>
-          <img src="img/slider/christmas-tree-ball.png" alt="christmas-tree-ball">
+          <img src="src/img/slider/christmas-tree-ball.png" alt="christmas-tree-ball">
           <p class="slider-text">dream</p>
-          <img src="img/slider/fairytale-house.png" alt="fairytale-house">
+          <img src="src/img/slider/fairytale-house.png" alt="fairytale-house">
         </div>
         <div class="button">
-          <button class="button-arrow" disabled>
+          <button id="move-left" class="button-arrow" disabled>
             <svg class="button-arrow--left" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="arrow-left">
               <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
               </g>
             </svg>
           </button>
-          <button class="button-arrow">
+          <button id="move-right" class="button-arrow">
             <svg class="button-arrow--right" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="arrow-right">
               <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -96,35 +104,7 @@
           <p class="caption">Best Gifts</p>
           <h2>especially for you</h2>
         </div>
-        <div class="layout-4-column">
-          <div class="card">
-            <img src="img/gifts/gift-for-work.png" alt="gift-for-work">
-            <div class="card__container">
-              <h4 class="for-work">For work</h4>
-              <h3>Console.log Guru</h3>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/gifts/gift-for-health.png" alt="gift-for-health">
-            <div class="card__container">
-              <h4 class="for-health">For health</h4>
-              <h3>Hydration Bot</h3>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/gifts/gift-for-work.png" alt="gift-for-work">
-            <div class="card__container">
-              <h4 class="for-work">For work</h4>
-              <h3>Merge Master</h3>
-            </div>
-          </div>
-          <div class="card">
-            <img src="img/gifts/gift-for-harmony.png" alt="gift-for-harmony">
-            <div class="card__container">
-              <h4 class="for-harmony">For harmony</h4>
-              <h3>Spontaneous Coding Philosopher</h3>
-            </div>
-          </div>
+        <div class="layout-4-column gifts-cards">
         </div>
     </div>
   </section>
@@ -136,22 +116,22 @@
         <p class="caption">The New Year is Coming Soon...</p>
         <div class="timer">
           <div class="timer__container">
-            <h2>47</h2>
+            <h2 id="day"></h2>
             <h4>days</h4>
           </div>
           <div class="separator"></div>
           <div class="timer__container">
-            <h2>5</h2>
+            <h2 id="hrs"></h2>
             <h4>hours</h4>
           </div>
           <div class="separator"></div>
           <div class="timer__container">
-            <h2>34</h2>
+            <h2 id="min"></h2>
             <h4>minutes</h4>
           </div>
           <div class="separator"></div>
           <div class="timer__container">
-            <h2>12</h2>
+            <h2 id="sec"></h2>
             <h4>seconds</h4>
           </div>   
         </div>
@@ -216,5 +196,6 @@
         </div>
     </div>
   </footer>
+  <script src="./dist/script.js"></script>
 </body>
 </html>
