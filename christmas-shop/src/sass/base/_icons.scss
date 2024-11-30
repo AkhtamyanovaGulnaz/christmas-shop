@@ -45,9 +45,11 @@
       stroke: $color-dark;
     }
 
-    &:hover svg path {
-      stroke: $color-primary;
-      @extend %transition;
+    @media (hover: hover) {
+      &:hover svg path {
+        stroke: $color-primary;
+        transition: all .3s ease-out;
+      }
     }
   }
 }

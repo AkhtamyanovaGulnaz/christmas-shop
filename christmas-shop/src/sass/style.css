@@ -1,4 +1,4 @@
-.card-contact, .card__container, .navigation__link, .tabs .tab, .socials_ico:hover svg path, .ico, .button-up, .button-arrow, .button-link {
+.card-contact, .card__container, .navigation__link, .tabs .tab, .ico, .button-up, .button-arrow, .button-link {
   transition: all 0.3s ease-out;
 }
 
@@ -110,9 +110,11 @@ h4 {
   border: none;
   cursor: pointer;
 }
-.button-link:hover {
-  background: #FFFFFF;
-  color: #181C29;
+@media (hover: hover) {
+  .button-link:hover {
+    background: #FFFFFF;
+    color: #181C29;
+  }
 }
 
 .button {
@@ -138,14 +140,18 @@ h4 {
 .button-arrow--left {
   transform: scaleX(-1);
 }
-.button-arrow:hover {
-  background: #FFFFFF;
+@media (hover: hover) {
+  .button-arrow:hover {
+    background: #FFFFFF;
+  }
 }
 .button-arrow svg path {
   stroke: #FFFFFF;
 }
-.button-arrow:hover svg path {
-  stroke: #FF4646;
+@media (hover: hover) {
+  .button-arrow:hover svg path {
+    stroke: #FF4646;
+  }
 }
 .button-arrow:disabled {
   opacity: 0.4;
@@ -239,8 +245,11 @@ h4 {
 .socials_icosvg path {
   stroke: #181C29;
 }
-.socials_ico:hover svg path {
-  stroke: #FF4646;
+@media (hover: hover) {
+  .socials_ico:hover svg path {
+    stroke: #FF4646;
+    transition: all 0.3s ease-out;
+  }
 }
 
 .for-work {
@@ -277,8 +286,10 @@ h4 {
     padding: 12px 8px;
   }
 }
-.tabs .tab:hover {
-  background: rgba(255, 255, 255, 0.2);
+@media (hover: hover) {
+  .tabs .tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 .tabs .tabs--active {
   background: rgba(255, 255, 255, 0.2);
@@ -735,10 +746,11 @@ h4 {
   pointer-events: none;
 }
 
-.card:hover .card__container {
-  color: #FF4646;
+@media (hover: hover) {
+  .card:hover .card__container {
+    color: #FF4646;
+  }
 }
-
 .card__container {
   display: flex;
   flex-direction: column;
@@ -777,8 +789,10 @@ h4 {
   color: #181C29;
   cursor: pointer;
 }
-.card-contact:hover {
-  color: #FF4646;
+@media (hover: hover) {
+  .card-contact:hover {
+    color: #FF4646;
+  }
 }
 
 .cta {

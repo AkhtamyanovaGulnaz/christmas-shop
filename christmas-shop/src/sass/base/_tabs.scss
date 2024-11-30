@@ -15,8 +15,10 @@
       padding: 12px 8px;
     }
 
-    &:hover {
-      background: $color-20white;
+    @media (hover: hover) {
+      &:hover {
+        background: $color-20white;
+      }
     }
   }
 
