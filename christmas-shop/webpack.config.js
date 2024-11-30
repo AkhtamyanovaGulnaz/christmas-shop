@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env, options) => {
   const isProduction = options.mode === 'production';
@@ -42,11 +43,25 @@ module.exports = (env, options) => {
             filename: 'images/[name][hash][ext]',
           },
         }, 
+        {
+          test: /\.html$/i,
+          loader: "html-loader",
+        },
       ]
     },
 
     plugins: [
       new CleanWebpackPlugin(),
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        filename: 'index.html',
+        inject: 'body',
+      }),
+      new HtmlWebpackPlugin({
+        template: './gifts.html',
+        filename: 'gifts.html',
+        inject: 'body',
+      }),
       new MiniCssExtractPlugin({
         filename: 'style.css'
       }),

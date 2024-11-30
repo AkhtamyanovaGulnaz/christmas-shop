@@ -9,7 +9,7 @@ import { Hamburger } from './js/Hamburger';
 window.onload = function() {
   //Render Articles
   if (gifts) {
-    if (window.location.pathname.includes('christmas-shop/gifts.html')) {
+    if (window.location.pathname.includes('gifts.html')) {
       renderArticlesToDom();
     } else {
       renderArticlesToDom(4);
@@ -19,7 +19,7 @@ window.onload = function() {
   //Tabs
   addTabsClickHandler();
 
-  if (window.location.pathname.includes('christmas-shop/index.html')) {
+  if (window.location.pathname.includes('index.html')) {
     setInterval(Timer, 1000);
     Slider();
   } else {
