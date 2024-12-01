@@ -15,8 +15,7 @@ body {
 }
 
 a {
-  -webkit-text-decoration: solid;
-          text-decoration: solid;
+  text-decoration: none;
 }
 
 h1 {
@@ -564,7 +563,7 @@ h4 {
     align-self: stretch;
     z-index: 1;
     width: 100%;
-    height: calc(100vh - 40px);
+    height: calc(100dvh - 52px);
   }
 }
 
